@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "t-pos-dan-tri-final-20021855-afb-2-d-556164-af-795-fb-8-b-9-fa-5980-aa-5-docx-1582538375918 1.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
