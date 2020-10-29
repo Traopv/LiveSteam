@@ -31,12 +31,31 @@ class Register1ViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
         print("==> size avata2",imgAvata2.bounds.size)
     }
+    
+    func displayAlert(title : String, message: String) {
+        let dialogMessage = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+        })
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+            print("Cancel button tapped")
+        }
+        dialogMessage.addAction(ok)
+        
+        self.present(dialogMessage, animated: true, completion: nil)
+        
+    }
 
     //MARK:-
     //MARK: button function
     @IBAction func nextScreen(_ sender: Any) {
-        let register2VC = Register2ViewController.init()
-        self.navigationController?.pushViewController(register2VC, animated: true)
+        if txtPhone.text == nil || txtPhone.text == "" {
+            displayAlert(title: "Thông báo!", message: "Vui lòng điền đầy đủ thông tin!")
+        } else {
+            let register2VC = Register2ViewController.init()
+            register2VC.phone = txtPhone.text ?? ""
+            self.navigationController?.pushViewController(register2VC, animated: true)
+        }
     }
 
     @IBAction func pushToLogin(_ sender: Any) {

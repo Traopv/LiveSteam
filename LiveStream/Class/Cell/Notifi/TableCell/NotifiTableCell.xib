@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LatoSemibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="NotifiTableCell" customModule="LiveStream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="101.5"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="101.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="15862267424f31fce50ec62d969dd4d64fbfc8cf0b 4" translatesAutoresizingMaskIntoConstraints="NO" id="hVT-ve-rLQ">
+                        <rect key="frame" x="16" y="15" width="60" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="6h7-BE-gaj"/>
+                            <constraint firstAttribute="height" constant="50" id="wHs-fO-Omm"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giao hàng thành công" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4c-KO-ETv">
+                        <rect key="frame" x="89" y="11" width="144.5" height="18"/>
+                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:10 - 06/10/2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqj-Ld-hHK">
+                        <rect key="frame" x="87" y="73" width="108.5" height="14.5"/>
+                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="12"/>
+                        <color key="textColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="882-2p-tiR">
+                        <rect key="frame" x="0.0" y="101" width="375" height="0.5"/>
+                        <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="dSR-Ar-kCO"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đơn hàng JSGKSFV3436TD đã giao thành công đến bạn" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Za9-CX-tlE">
+                        <rect key="frame" x="87" y="33" width="272" height="36"/>
+                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="15"/>
+                        <color key="textColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Wqj-Ld-hHK" firstAttribute="top" secondItem="Za9-CX-tlE" secondAttribute="bottom" constant="4" id="19T-ro-ZvJ"/>
+                    <constraint firstItem="c4c-KO-ETv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="6KB-el-Y4a"/>
+                    <constraint firstAttribute="trailing" secondItem="882-2p-tiR" secondAttribute="trailing" id="ORY-1j-03S"/>
+                    <constraint firstItem="Za9-CX-tlE" firstAttribute="top" secondItem="c4c-KO-ETv" secondAttribute="bottom" constant="4" id="Q7V-Oh-vo1"/>
+                    <constraint firstItem="hVT-ve-rLQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="QYF-YO-3s0"/>
+                    <constraint firstItem="hVT-ve-rLQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="ROA-7Z-EPH"/>
+                    <constraint firstAttribute="bottom" secondItem="Wqj-Ld-hHK" secondAttribute="bottom" constant="14" id="URE-2D-ERv"/>
+                    <constraint firstAttribute="bottom" secondItem="882-2p-tiR" secondAttribute="bottom" id="XTo-u2-3k9"/>
+                    <constraint firstItem="882-2p-tiR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="b5e-w3-muk"/>
+                    <constraint firstAttribute="trailing" secondItem="Za9-CX-tlE" secondAttribute="trailing" constant="16" id="fT6-Tq-mQa"/>
+                    <constraint firstItem="c4c-KO-ETv" firstAttribute="leading" secondItem="hVT-ve-rLQ" secondAttribute="trailing" constant="13" id="iu8-gE-voD"/>
+                    <constraint firstItem="Za9-CX-tlE" firstAttribute="leading" secondItem="hVT-ve-rLQ" secondAttribute="trailing" constant="11" id="rYh-cI-uGd"/>
+                    <constraint firstItem="Wqj-Ld-hHK" firstAttribute="leading" secondItem="hVT-ve-rLQ" secondAttribute="trailing" constant="11" id="wjN-Yc-pac"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgCell" destination="hVT-ve-rLQ" id="tzG-jP-pnX"/>
+                <outlet property="lbDicription" destination="Za9-CX-tlE" id="anb-cv-ECM"/>
+                <outlet property="lbTime" destination="Wqj-Ld-hHK" id="hnw-4X-1FC"/>
+                <outlet property="lbTypeOrder" destination="c4c-KO-ETv" id="obk-pM-SFm"/>
+            </connections>
+            <point key="canvasLocation" x="-1604" y="35"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="15862267424f31fce50ec62d969dd4d64fbfc8cf0b 4" width="60" height="50"/>
+    </resources>
+</document>

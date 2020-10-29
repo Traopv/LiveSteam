@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LatoSemibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="DetailAccCell3" customModule="LiveStream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giới tính" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXn-bC-H16">
+                        <rect key="frame" x="16" y="12" width="54" height="17"/>
+                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="14"/>
+                        <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_button_unchecked_24px" translatesAutoresizingMaskIntoConstraints="NO" id="l3t-dL-JOm">
+                        <rect key="frame" x="20" y="34" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="Az5-TO-28I"/>
+                            <constraint firstAttribute="height" constant="24" id="BrQ-jv-GBp"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObZ-3H-OnK">
+                        <rect key="frame" x="56" y="37" width="33.5" height="20"/>
+                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                        <color key="textColor" red="0.74117647058823533" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuJ-w8-NtK">
+                        <rect key="frame" x="14" y="29" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="TrW-Gy-a14"/>
+                            <constraint firstAttribute="height" constant="36" id="epH-LH-O4m"/>
+                        </constraints>
+                        <connections>
+                            <action selector="chooseBoy:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XnW-dQ-mgZ"/>
+                        </connections>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_button_checked_24px_sharp" translatesAutoresizingMaskIntoConstraints="NO" id="Tiv-rv-ffg">
+                        <rect key="frame" x="154.5" y="34" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="6jD-Tf-F16"/>
+                            <constraint firstAttribute="height" constant="24" id="owN-EH-jRq"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nữ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dN-Ny-s9q">
+                        <rect key="frame" x="190.5" y="37" width="22.5" height="20"/>
+                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G22-Od-UrM">
+                        <rect key="frame" x="16" y="64" width="343" height="1"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="ksD-xP-H3B"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1L-4l-6im">
+                        <rect key="frame" x="149" y="28" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="rIH-L2-3hJ"/>
+                            <constraint firstAttribute="height" constant="36" id="s1N-yv-Fkz"/>
+                        </constraints>
+                        <connections>
+                            <action selector="chooseGirl:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dVQ-0Y-mzw"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="G22-Od-UrM" secondAttribute="bottom" id="21Y-8j-YsJ"/>
+                    <constraint firstItem="B1L-4l-6im" firstAttribute="top" secondItem="pXn-bC-H16" secondAttribute="bottom" constant="-1" id="238-pt-jCM"/>
+                    <constraint firstItem="G22-Od-UrM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="2MB-FR-dFn"/>
+                    <constraint firstItem="5dN-Ny-s9q" firstAttribute="top" secondItem="pXn-bC-H16" secondAttribute="bottom" constant="8" id="3CI-YA-dgJ"/>
+                    <constraint firstItem="5dN-Ny-s9q" firstAttribute="leading" secondItem="B1L-4l-6im" secondAttribute="trailing" constant="5.5" id="AOM-27-v61"/>
+                    <constraint firstItem="Tiv-rv-ffg" firstAttribute="leading" secondItem="ObZ-3H-OnK" secondAttribute="trailing" constant="65" id="CuS-eA-s8u"/>
+                    <constraint firstAttribute="trailing" secondItem="G22-Od-UrM" secondAttribute="trailing" constant="16" id="Fsb-ya-fvs"/>
+                    <constraint firstItem="NuJ-w8-NtK" firstAttribute="top" secondItem="pXn-bC-H16" secondAttribute="bottom" id="LlU-mG-IST"/>
+                    <constraint firstItem="l3t-dL-JOm" firstAttribute="top" secondItem="pXn-bC-H16" secondAttribute="bottom" constant="5" id="P2O-CY-EJ1"/>
+                    <constraint firstItem="pXn-bC-H16" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="QKp-A7-eQj"/>
+                    <constraint firstItem="ObZ-3H-OnK" firstAttribute="top" secondItem="pXn-bC-H16" secondAttribute="bottom" constant="8" id="V0m-7t-IqA"/>
+                    <constraint firstItem="NuJ-w8-NtK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="X2H-hm-ZmC"/>
+                    <constraint firstItem="5dN-Ny-s9q" firstAttribute="leading" secondItem="Tiv-rv-ffg" secondAttribute="trailing" constant="12" id="hRe-0p-O4P"/>
+                    <constraint firstItem="Tiv-rv-ffg" firstAttribute="top" secondItem="pXn-bC-H16" secondAttribute="bottom" constant="5" id="mzw-gs-vfB"/>
+                    <constraint firstItem="ObZ-3H-OnK" firstAttribute="leading" secondItem="l3t-dL-JOm" secondAttribute="trailing" constant="12" id="sO6-gN-dyu"/>
+                    <constraint firstItem="pXn-bC-H16" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="wAN-s6-h4Y"/>
+                    <constraint firstItem="l3t-dL-JOm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="yQI-m3-fLV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgBoy" destination="l3t-dL-JOm" id="SAL-lp-1vA"/>
+                <outlet property="imgGirl" destination="Tiv-rv-ffg" id="oWE-jg-Rem"/>
+                <outlet property="lbBoy" destination="ObZ-3H-OnK" id="G9q-NC-0dy"/>
+                <outlet property="lbGirl" destination="5dN-Ny-s9q" id="UAK-Fo-MhJ"/>
+            </connections>
+            <point key="canvasLocation" x="140" y="-10"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="radio_button_checked_24px_sharp" width="24" height="24"/>
+        <image name="radio_button_unchecked_24px" width="24" height="24"/>
+    </resources>
+</document>

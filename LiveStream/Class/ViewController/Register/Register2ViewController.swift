@@ -16,9 +16,11 @@ class Register2ViewController: UIViewController {
     @IBOutlet weak var viewPhone: UIView!
     @IBOutlet weak var viewOTP: UIView!
     
+    var phone : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         conFig()
+        txtPhone.text = phone
     }
 
     //MARK:-
@@ -36,11 +38,30 @@ class Register2ViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
 
+    func displayAlert(title : String, message: String) {
+        let dialogMessage = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+        })
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+            print("Cancel button tapped")
+        }
+        dialogMessage.addAction(ok)
+        
+        self.present(dialogMessage, animated: true, completion: nil)
+        
+    }
+    
     //MARK:-
     //MARK: button function
     @IBAction func registerAccount(_ sender: Any) {
-        let register3VC = Register3ViewController.init()
-        self.navigationController?.pushViewController(register3VC, animated: true)
+        if txtOTP.text == "" || txtOTP.text == nil {
+            displayAlert(title: "Thông báo!", message: "Bạn cần nhập mã OTP!")
+        } else {
+            let register3VC = Register3ViewController.init()
+            register3VC.phone = phone
+            self.navigationController?.pushViewController(register3VC, animated: true)
+        }
     }
 
     @IBAction func pushToLogin(_ sender: Any) {

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LatoSemibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Cart3ViewController" customModule="LiveStream" customModuleProvider="target">
+            <connections>
+                <outlet property="btnOrder" destination="Zh6-9O-Gr5" id="5cA-rz-K3E"/>
+                <outlet property="lbDelivery" destination="qEA-Ux-sKl" id="ibB-DM-oDg"/>
+                <outlet property="lbSale" destination="qVm-9e-K7I" id="C1t-Fn-hZJ"/>
+                <outlet property="lbTotal" destination="uib-1x-Ayn" id="ri8-WU-UUq"/>
+                <outlet property="lbTotalMoney" destination="iwT-3j-fWP" id="cOo-ue-r4j"/>
+                <outlet property="lbTotalProductsMoney" destination="Y9a-7z-VYk" id="9Vf-1V-Dce"/>
+                <outlet property="myTable" destination="fq3-1I-yFV" id="ZR3-79-saV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view1" destination="LoO-fo-YkR" id="Vdo-HW-LX7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="fq3-1I-yFV">
+                    <rect key="frame" x="0.0" y="44" width="375" height="281"/>
+                    <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="VgM-zO-BIP"/>
+                        <outlet property="delegate" destination="-1" id="aww-dB-Ywb"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zhj-fs-4Ie">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwG-ro-GeQ">
+                            <rect key="frame" x="10" y="5" width="36" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="7P5-m9-iId"/>
+                                <constraint firstAttribute="height" constant="36" id="avV-dm-r7s"/>
+                            </constraints>
+                            <state key="normal" image="Vector 16"/>
+                            <connections>
+                                <action selector="back:" destination="-1" eventType="touchUpInside" id="UfE-nS-9NJ"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giỏ hàng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laC-U4-Xaa">
+                            <rect key="frame" x="62" y="11" width="79" height="24"/>
+                            <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="20"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="laC-U4-Xaa" firstAttribute="leading" secondItem="BwG-ro-GeQ" secondAttribute="trailing" constant="16" id="BFy-Bb-aT0"/>
+                        <constraint firstItem="laC-U4-Xaa" firstAttribute="top" secondItem="Zhj-fs-4Ie" secondAttribute="top" constant="11" id="Epd-Fv-0ie"/>
+                        <constraint firstItem="BwG-ro-GeQ" firstAttribute="leading" secondItem="Zhj-fs-4Ie" secondAttribute="leading" constant="10" id="JeZ-OK-GKo"/>
+                        <constraint firstItem="BwG-ro-GeQ" firstAttribute="top" secondItem="Zhj-fs-4Ie" secondAttribute="top" constant="5" id="kHj-He-FE5"/>
+                        <constraint firstAttribute="height" constant="44" id="rwz-dy-PFt"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7G-sY-Kek">
+                    <rect key="frame" x="0.0" y="325" width="375" height="342"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LoO-fo-YkR">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="342"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông tin thanh toán" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6T-dZ-81a">
+                                    <rect key="frame" x="18" y="16" width="149" height="19"/>
+                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng tiền sản phẩm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrq-i3-nRU">
+                                    <rect key="frame" x="18" y="43" width="137.5" height="19"/>
+                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                    <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="đ240.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9a-7z-VYk">
+                                    <rect key="frame" x="291.5" y="43.5" width="68.5" height="19"/>
+                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                    <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="đ48.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVm-9e-K7I">
+                                    <rect key="frame" x="300.5" y="70.5" width="59.5" height="19"/>
+                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                    <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="đ0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEA-Ux-sKl">
+                                    <rect key="frame" x="341.5" y="97.5" width="18.5" height="19"/>
+                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                    <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khuyến mãi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxL-2f-org">
+                                    <rect key="frame" x="18" y="70" width="84" height="19"/>
+                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                    <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phí giao hàng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maa-Iw-aea">
+                                    <rect key="frame" x="18" y="97" width="95" height="19"/>
+                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                    <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng tiền" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5h-V4-qBe">
+                                    <rect key="frame" x="18" y="124" width="66" height="19"/>
+                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                    <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zh6-9O-Gr5">
+                                    <rect key="frame" x="16" y="287" width="343" height="44"/>
+                                    <color key="backgroundColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="26Y-AS-8SO"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="14"/>
+                                    <state key="normal" title="ĐẶT HÀNG">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="clickOrder:" destination="-1" eventType="touchUpInside" id="cWn-U3-gUV"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="đ240.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwT-3j-fWP">
+                                    <rect key="frame" x="291.5" y="124.5" width="68.5" height="19"/>
+                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                    <color key="textColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHs-M3-RFj">
+                                    <rect key="frame" x="16" y="159.5" width="343" height="0.5"/>
+                                    <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="0.5" id="sjT-kY-VdT"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phương thức thanh toán" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hah-P9-WTR">
+                                    <rect key="frame" x="17" y="176" width="174" height="20"/>
+                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanh toán khi nhận hàng (COD)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4T-Ak-9UT">
+                                    <rect key="frame" x="17" y="204" width="230.5" height="20"/>
+                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                    <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thành tiền" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7i-jW-Ifd">
+                                    <rect key="frame" x="17" y="256" width="76" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="đ240.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uib-1x-Ayn">
+                                    <rect key="frame" x="272" y="252" width="86" height="24"/>
+                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="20"/>
+                                    <color key="textColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="hah-P9-WTR" firstAttribute="top" secondItem="NHs-M3-RFj" secondAttribute="bottom" constant="16" id="3Rj-hv-8ca"/>
+                                <constraint firstAttribute="trailing" secondItem="qEA-Ux-sKl" secondAttribute="trailing" constant="15" id="6UP-MU-LNB"/>
+                                <constraint firstItem="L4T-Ak-9UT" firstAttribute="top" secondItem="hah-P9-WTR" secondAttribute="bottom" constant="8" id="7Ho-Bv-uZl"/>
+                                <constraint firstItem="qVm-9e-K7I" firstAttribute="top" secondItem="Y9a-7z-VYk" secondAttribute="bottom" constant="8" id="AXf-Vo-ATk"/>
+                                <constraint firstItem="hah-P9-WTR" firstAttribute="leading" secondItem="LoO-fo-YkR" secondAttribute="leading" constant="17" id="Cjh-YQ-KEc"/>
+                                <constraint firstAttribute="trailing" secondItem="qVm-9e-K7I" secondAttribute="trailing" constant="15" id="DG9-sA-PHS"/>
+                                <constraint firstAttribute="bottom" secondItem="Zh6-9O-Gr5" secondAttribute="bottom" constant="11" id="EBb-Rj-gMr"/>
+                                <constraint firstItem="x6T-dZ-81a" firstAttribute="leading" secondItem="LoO-fo-YkR" secondAttribute="leading" constant="18" id="EyF-oj-jT0"/>
+                                <constraint firstItem="qEA-Ux-sKl" firstAttribute="top" secondItem="qVm-9e-K7I" secondAttribute="bottom" constant="8" id="F0J-9d-U1q"/>
+                                <constraint firstItem="E5h-V4-qBe" firstAttribute="leading" secondItem="LoO-fo-YkR" secondAttribute="leading" constant="18" id="MZH-jA-Sbf"/>
+                                <constraint firstItem="qxL-2f-org" firstAttribute="leading" secondItem="LoO-fo-YkR" secondAttribute="leading" constant="18" id="MvD-ba-Q3O"/>
+                                <constraint firstAttribute="height" constant="342" id="PGy-2K-zCg"/>
+                                <constraint firstAttribute="trailing" secondItem="uib-1x-Ayn" secondAttribute="trailing" constant="17" id="RBq-8I-5Kb"/>
+                                <constraint firstItem="uib-1x-Ayn" firstAttribute="top" secondItem="L4T-Ak-9UT" secondAttribute="bottom" constant="28" id="RPl-Ax-B8W"/>
+                                <constraint firstItem="nrq-i3-nRU" firstAttribute="leading" secondItem="LoO-fo-YkR" secondAttribute="leading" constant="18" id="SNa-WA-55B"/>
+                                <constraint firstItem="L4T-Ak-9UT" firstAttribute="leading" secondItem="LoO-fo-YkR" secondAttribute="leading" constant="17" id="SaA-Lu-670"/>
+                                <constraint firstItem="qxL-2f-org" firstAttribute="top" secondItem="nrq-i3-nRU" secondAttribute="bottom" constant="8" id="Vnd-gx-zzQ"/>
+                                <constraint firstAttribute="trailing" secondItem="Zh6-9O-Gr5" secondAttribute="trailing" constant="16" id="W8Z-gW-xDS"/>
+                                <constraint firstItem="maa-Iw-aea" firstAttribute="leading" secondItem="LoO-fo-YkR" secondAttribute="leading" constant="18" id="WuH-KQ-cor"/>
+                                <constraint firstItem="NHs-M3-RFj" firstAttribute="top" secondItem="iwT-3j-fWP" secondAttribute="bottom" constant="16" id="XCq-dR-7EW"/>
+                                <constraint firstItem="E5h-V4-qBe" firstAttribute="top" secondItem="maa-Iw-aea" secondAttribute="bottom" constant="8" id="Xka-66-dhw"/>
+                                <constraint firstItem="Zh6-9O-Gr5" firstAttribute="leading" secondItem="LoO-fo-YkR" secondAttribute="leading" constant="16" id="Ymg-ee-QLr"/>
+                                <constraint firstItem="t7i-jW-Ifd" firstAttribute="top" secondItem="L4T-Ak-9UT" secondAttribute="bottom" constant="32" id="b5R-Lu-3ZB"/>
+                                <constraint firstItem="maa-Iw-aea" firstAttribute="top" secondItem="qxL-2f-org" secondAttribute="bottom" constant="8" id="bxy-PY-glH"/>
+                                <constraint firstItem="iwT-3j-fWP" firstAttribute="top" secondItem="qEA-Ux-sKl" secondAttribute="bottom" constant="8" id="cYL-cb-Z7V"/>
+                                <constraint firstItem="nrq-i3-nRU" firstAttribute="top" secondItem="x6T-dZ-81a" secondAttribute="bottom" constant="8" id="g8S-4b-24R"/>
+                                <constraint firstAttribute="trailing" secondItem="NHs-M3-RFj" secondAttribute="trailing" constant="16" id="geO-LC-Bwk"/>
+                                <constraint firstItem="NHs-M3-RFj" firstAttribute="leading" secondItem="LoO-fo-YkR" secondAttribute="leading" constant="16" id="k1L-nP-TQN"/>
+                                <constraint firstItem="Y9a-7z-VYk" firstAttribute="top" secondItem="x6T-dZ-81a" secondAttribute="bottom" constant="8.5" id="k4m-3Q-3gI"/>
+                                <constraint firstAttribute="trailing" secondItem="Y9a-7z-VYk" secondAttribute="trailing" constant="15" id="nlg-GK-Sso"/>
+                                <constraint firstItem="x6T-dZ-81a" firstAttribute="top" secondItem="LoO-fo-YkR" secondAttribute="top" constant="16" id="uRt-0S-kYl"/>
+                                <constraint firstItem="t7i-jW-Ifd" firstAttribute="leading" secondItem="LoO-fo-YkR" secondAttribute="leading" constant="17" id="v77-dc-g2S"/>
+                                <constraint firstAttribute="trailing" secondItem="iwT-3j-fWP" secondAttribute="trailing" constant="15" id="y4B-U3-RXC"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="LoO-fo-YkR" secondAttribute="trailing" id="FAe-G7-Kha"/>
+                        <constraint firstItem="LoO-fo-YkR" firstAttribute="top" secondItem="n7G-sY-Kek" secondAttribute="top" id="ZYw-hi-1Ig"/>
+                        <constraint firstAttribute="bottom" secondItem="LoO-fo-YkR" secondAttribute="bottom" id="gM5-uq-tZh"/>
+                        <constraint firstAttribute="height" constant="342" id="vWc-h2-Tdc"/>
+                        <constraint firstItem="LoO-fo-YkR" firstAttribute="leading" secondItem="n7G-sY-Kek" secondAttribute="leading" id="xjy-s1-MVZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="n7G-sY-Kek" secondAttribute="bottom" id="Agw-Hi-GSb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="n7G-sY-Kek" secondAttribute="trailing" id="DXS-4L-Cxd"/>
+                <constraint firstItem="Zhj-fs-4Ie" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Em4-XU-4AA"/>
+                <constraint firstItem="n7G-sY-Kek" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="M3o-NB-Y8t"/>
+                <constraint firstItem="fq3-1I-yFV" firstAttribute="top" secondItem="Zhj-fs-4Ie" secondAttribute="bottom" id="NRn-ye-nIr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="n7G-sY-Kek" secondAttribute="bottom" id="SHy-9I-Cph"/>
+                <constraint firstItem="n7G-sY-Kek" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="duM-7W-1Du"/>
+                <constraint firstItem="fq3-1I-yFV" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="eax-gC-Hne"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Zhj-fs-4Ie" secondAttribute="trailing" id="gcD-1B-GE6"/>
+                <constraint firstItem="Zhj-fs-4Ie" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hOt-1z-5VZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="n7G-sY-Kek" secondAttribute="trailing" id="rSc-sh-D17"/>
+                <constraint firstItem="fq3-1I-yFV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rrc-w4-3ry"/>
+                <constraint firstItem="n7G-sY-Kek" firstAttribute="top" secondItem="fq3-1I-yFV" secondAttribute="bottom" id="zyI-Cd-gR7"/>
+            </constraints>
+            <point key="canvasLocation" x="-2244" y="38"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Vector 16" width="17" height="13"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

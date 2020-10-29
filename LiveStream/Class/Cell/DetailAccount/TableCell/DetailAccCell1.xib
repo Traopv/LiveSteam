@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LatoSemibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="DetailAccCell1" customModule="LiveStream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1584324285-90-anh-2-1584088794-width650height867 1" translatesAutoresizingMaskIntoConstraints="NO" id="BVT-kq-bgt">
+                        <rect key="frame" x="143.5" y="16" width="88" height="88"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="88" id="B2e-W1-3Do"/>
+                            <constraint firstAttribute="height" constant="88" id="M60-8y-ZOn"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thay đổi ảnh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znA-3g-4p2">
+                        <rect key="frame" x="158" y="122" width="79" height="17"/>
+                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="14"/>
+                        <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera-settings-flip-1 1" translatesAutoresizingMaskIntoConstraints="NO" id="4HU-XW-62V">
+                        <rect key="frame" x="126" y="120" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Gip-8V-yfs"/>
+                            <constraint firstAttribute="width" constant="20" id="gGl-UH-2up"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlt-Zk-XXy">
+                        <rect key="frame" x="16" y="150" width="343" height="1"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="4pU-yj-ckA"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJy-Fe-Hi6">
+                        <rect key="frame" x="128.5" y="120" width="118" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="118" id="TqQ-iN-bgd"/>
+                            <constraint firstAttribute="height" constant="20" id="aB7-Dd-H96"/>
+                        </constraints>
+                        <connections>
+                            <action selector="chooseImage:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="w5R-EJ-SEs"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="xlt-Zk-XXy" secondAttribute="trailing" constant="16" id="3gg-d1-GFT"/>
+                    <constraint firstItem="znA-3g-4p2" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="10" id="4uy-PV-sMz"/>
+                    <constraint firstAttribute="bottom" secondItem="xlt-Zk-XXy" secondAttribute="bottom" id="D1L-Xb-8Di"/>
+                    <constraint firstItem="BVT-kq-bgt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="FXf-ZP-Jj4"/>
+                    <constraint firstItem="znA-3g-4p2" firstAttribute="top" secondItem="BVT-kq-bgt" secondAttribute="bottom" constant="18" id="Lj7-W6-LVG"/>
+                    <constraint firstItem="cJy-Fe-Hi6" firstAttribute="top" secondItem="BVT-kq-bgt" secondAttribute="bottom" constant="16" id="MEa-89-9Ou"/>
+                    <constraint firstItem="znA-3g-4p2" firstAttribute="leading" secondItem="4HU-XW-62V" secondAttribute="trailing" constant="12" id="PqQ-sr-Drm"/>
+                    <constraint firstItem="xlt-Zk-XXy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="SKf-KR-drX"/>
+                    <constraint firstItem="4HU-XW-62V" firstAttribute="top" secondItem="BVT-kq-bgt" secondAttribute="bottom" constant="16" id="lgK-8x-JQ5"/>
+                    <constraint firstItem="cJy-Fe-Hi6" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="sLM-Ah-Sos"/>
+                    <constraint firstItem="BVT-kq-bgt" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="sUa-RH-DoO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgCell" destination="BVT-kq-bgt" id="Zuw-Pn-E1m"/>
+            </connections>
+            <point key="canvasLocation" x="-137" y="69"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="1584324285-90-anh-2-1584088794-width650height867 1" width="60" height="60"/>
+        <image name="camera-settings-flip-1 1" width="20" height="20"/>
+    </resources>
+</document>

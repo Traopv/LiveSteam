@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LatoSemibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductsCollCell" customModule="LiveStream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="125"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="125"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2011463_L 1" translatesAutoresizingMaskIntoConstraints="NO" id="86w-pV-mSf">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="9Va-E9-b5i"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Váy nữ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oz0-re-Ttg">
+                        <rect key="frame" x="28.5" y="108" width="43" height="17"/>
+                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="14"/>
+                        <color key="textColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="86w-pV-mSf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0AM-BY-jht"/>
+                <constraint firstItem="Oz0-re-Ttg" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="3v6-9E-0bs"/>
+                <constraint firstAttribute="trailing" secondItem="86w-pV-mSf" secondAttribute="trailing" id="Lwe-7r-dxb"/>
+                <constraint firstItem="86w-pV-mSf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="uoZ-EY-MEU"/>
+                <constraint firstItem="Oz0-re-Ttg" firstAttribute="top" secondItem="86w-pV-mSf" secondAttribute="bottom" constant="8" id="wNY-FF-05b"/>
+            </constraints>
+            <size key="customSize" width="187" height="108"/>
+            <connections>
+                <outlet property="imgCell" destination="86w-pV-mSf" id="YQ6-8p-tS9"/>
+                <outlet property="lbName" destination="Oz0-re-Ttg" id="lN4-i3-Dtp"/>
+            </connections>
+            <point key="canvasLocation" x="-412.31884057971018" y="101.78571428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="2011463_L 1" width="100" height="100"/>
+    </resources>
+</document>

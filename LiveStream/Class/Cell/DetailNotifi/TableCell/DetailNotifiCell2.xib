@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LatoSemibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="DetailNotifiCell2" customModule="LiveStream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa chỉ nhận hàng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wV-Bc-Wlp">
+                        <rect key="frame" x="17" y="12" width="341" height="19"/>
+                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ngọc quỳnh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfe-qv-Dpy">
+                        <rect key="frame" x="17" y="39" width="341" height="19"/>
+                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                        <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0971950208" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQD-FG-QP9">
+                        <rect key="frame" x="17" y="66" width="341" height="19"/>
+                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                        <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="D6-TT1, khu đô thị Văn Quán, Hà Đông, Hà Nội" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3XY-7N-0TJ">
+                        <rect key="frame" x="17" y="93" width="341" height="21.5"/>
+                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                        <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BdW-yE-19d">
+                        <rect key="frame" x="17" y="126.5" width="341" height="0.5"/>
+                        <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="wA8-xi-rSi"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3wV-Bc-Wlp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="1L0-Pt-jGJ"/>
+                    <constraint firstItem="jfe-qv-Dpy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="2BK-xn-MBJ"/>
+                    <constraint firstAttribute="bottom" secondItem="BdW-yE-19d" secondAttribute="bottom" id="4kz-94-2DT"/>
+                    <constraint firstItem="jfe-qv-Dpy" firstAttribute="top" secondItem="3wV-Bc-Wlp" secondAttribute="bottom" constant="8" id="7BT-tz-Klp"/>
+                    <constraint firstAttribute="trailing" secondItem="BdW-yE-19d" secondAttribute="trailing" constant="17" id="CcQ-Jy-edb"/>
+                    <constraint firstItem="OQD-FG-QP9" firstAttribute="top" secondItem="jfe-qv-Dpy" secondAttribute="bottom" constant="8" id="Jlz-Fo-hHn"/>
+                    <constraint firstAttribute="trailing" secondItem="jfe-qv-Dpy" secondAttribute="trailing" constant="17" id="L3K-4f-DpV"/>
+                    <constraint firstItem="3XY-7N-0TJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="Lqa-UI-y5Y"/>
+                    <constraint firstAttribute="trailing" secondItem="3wV-Bc-Wlp" secondAttribute="trailing" constant="17" id="SAD-9j-vQf"/>
+                    <constraint firstItem="OQD-FG-QP9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="aDJ-0A-YMt"/>
+                    <constraint firstAttribute="bottom" secondItem="3XY-7N-0TJ" secondAttribute="bottom" constant="12.5" id="az0-9F-dYq"/>
+                    <constraint firstItem="3XY-7N-0TJ" firstAttribute="top" secondItem="OQD-FG-QP9" secondAttribute="bottom" constant="8" id="c0w-VG-aAc"/>
+                    <constraint firstItem="3wV-Bc-Wlp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="d2h-42-Cps"/>
+                    <constraint firstAttribute="trailing" secondItem="3XY-7N-0TJ" secondAttribute="trailing" constant="17" id="jWi-Er-con"/>
+                    <constraint firstAttribute="trailing" secondItem="OQD-FG-QP9" secondAttribute="trailing" constant="17" id="orr-0E-ZTc"/>
+                    <constraint firstItem="BdW-yE-19d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="qP1-gs-6bo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lbAddress" destination="3XY-7N-0TJ" id="5Gt-sl-Vjb"/>
+                <outlet property="lbCustomer" destination="jfe-qv-Dpy" id="WaB-tM-LCn"/>
+                <outlet property="lbPhone" destination="OQD-FG-QP9" id="lgU-ad-edJ"/>
+            </connections>
+            <point key="canvasLocation" x="-515.21739130434787" y="119.53125"/>
+        </tableViewCell>
+    </objects>
+</document>

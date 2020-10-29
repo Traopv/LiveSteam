@@ -17,6 +17,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var viewPass: UIView!
     @IBOutlet weak var imgAvata: UIImageView!
     
+    var phone = Defaults.getAccount().phone
+    var password = Defaults.getAccount().password
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         conFig()
@@ -36,12 +39,40 @@ class LoginViewController: UIViewController {
         btnLogin.layer.cornerRadius = 2.0
         self.navigationController?.isNavigationBarHidden = true
         
-        print("==> size avata",imgAvata.bounds.size)
+        txtPhone.text = Defaults.getAccount().phone
+    }
+    
+    func displayAlert(title : String, message: String) {
+        let dialogMessage = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+        })
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+            print("Cancel button tapped")
+        }
+        
+        dialogMessage.addAction(ok)
+        
+        self.present(dialogMessage, animated: true, completion: nil)
+        
     }
 
     //MARK:-
     //MARK: button function
     @IBAction func login(_ sender: Any) {
+        
+        if txtPhone.text == "" || txtPass.text == "" {
+            displayAlert(title: "Thông báo!", message: "Vui lòng điền đẩy đủ thông tin!")
+        } else {
+            if txtPhone.text == phone && txtPass.text == password {
+                let tabbarVC = TabbarViewController.init()
+                self.navigationController?.pushViewController(tabbarVC, animated: true)
+            } else if txtPhone.text != phone {
+                displayAlert(title: "Thông báo", message: "Số điện thoại không chính xác!")
+            } else if txtPass.text != password {
+                displayAlert(title: "Thông báo", message: "Mật khẩu không chính xác!")
+            }
+        }
     }
 
     @IBAction func pushToRegister(_ sender: Any) {

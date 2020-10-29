@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Heavy.ttf">
+            <string>Lato-Heavy</string>
+        </array>
+        <array key="LatoSemibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="207" id="KGk-i7-Jjw" customClass="DiscountCodeCell" customModule="LiveStream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NfE-ML-G7G">
+                        <rect key="frame" x="16" y="13" width="221" height="40"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mã giảm giá" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CRB-li-eEJ">
+                                <rect key="frame" x="12" y="9.5" width="209" height="21"/>
+                                <color key="textColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CRB-li-eEJ" firstAttribute="centerY" secondItem="NfE-ML-G7G" secondAttribute="centerY" id="5oy-do-ADq"/>
+                            <constraint firstAttribute="height" constant="40" id="JpD-yz-gVM"/>
+                            <constraint firstAttribute="width" constant="221" id="Ys2-Oj-ea7"/>
+                            <constraint firstItem="CRB-li-eEJ" firstAttribute="leading" secondItem="NfE-ML-G7G" secondAttribute="leading" constant="12" id="dg3-gj-BlY"/>
+                            <constraint firstAttribute="trailing" secondItem="CRB-li-eEJ" secondAttribute="trailing" id="qkT-Kp-eZd"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x97-aA-HTi">
+                        <rect key="frame" x="249" y="13" width="110" height="40"/>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="T7t-5z-rFG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Lato-Heavy" family="Lato" pointSize="14"/>
+                        <state key="normal" title="ÁP DỤNG">
+                            <color key="titleColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="clickApply:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3aF-zS-Wxf"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NfE-ML-G7G" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="0z3-bc-2HV"/>
+                    <constraint firstItem="NfE-ML-G7G" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="29g-0t-bOi"/>
+                    <constraint firstAttribute="trailing" secondItem="x97-aA-HTi" secondAttribute="trailing" constant="16" id="6lz-kD-GBM"/>
+                    <constraint firstItem="x97-aA-HTi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="msI-CB-fwZ"/>
+                    <constraint firstItem="x97-aA-HTi" firstAttribute="leading" secondItem="NfE-ML-G7G" secondAttribute="trailing" constant="12" id="wnk-az-FEc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnApply" destination="x97-aA-HTi" id="zlu-5X-emP"/>
+                <outlet property="txtDiscountCode" destination="CRB-li-eEJ" id="cHD-Jp-gaw"/>
+                <outlet property="viewDiscount" destination="NfE-ML-G7G" id="C47-he-hm6"/>
+            </connections>
+            <point key="canvasLocation" x="-880" y="49"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

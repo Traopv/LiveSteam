@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LatoSemibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailAccountViewController" customModule="LiveStream" customModuleProvider="target">
+            <connections>
+                <outlet property="btnChangeAccount" destination="HT2-8Z-OIB" id="ZtO-F2-IoG"/>
+                <outlet property="btnSave" destination="HT2-8Z-OIB" id="Gbn-dI-FT8"/>
+                <outlet property="myTable" destination="3o7-k0-0fg" id="b6A-dg-Wn6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="863"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LLv-db-Wtg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqo-kf-Ha0">
+                            <rect key="frame" x="22" y="16" width="16" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="12" id="5N3-7H-VWh"/>
+                                <constraint firstAttribute="width" constant="16" id="kpa-8d-Di6"/>
+                            </constraints>
+                            <state key="normal" image="Vector 16"/>
+                            <connections>
+                                <action selector="backToAccountVC:" destination="-1" eventType="touchUpInside" id="bx8-SJ-7QS"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông tin cá nhân" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4Z-ib-k2C">
+                            <rect key="frame" x="60" y="10" width="158.5" height="24"/>
+                            <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="20"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="I4Z-ib-k2C" firstAttribute="leading" secondItem="bqo-kf-Ha0" secondAttribute="trailing" constant="22" id="9VK-c7-7d4"/>
+                        <constraint firstItem="I4Z-ib-k2C" firstAttribute="centerY" secondItem="LLv-db-Wtg" secondAttribute="centerY" id="FXd-8l-Y2i"/>
+                        <constraint firstItem="bqo-kf-Ha0" firstAttribute="centerY" secondItem="LLv-db-Wtg" secondAttribute="centerY" id="giZ-Rr-sAm"/>
+                        <constraint firstAttribute="height" constant="44" id="ldC-rM-7Dd"/>
+                        <constraint firstItem="bqo-kf-Ha0" firstAttribute="leading" secondItem="LLv-db-Wtg" secondAttribute="leading" constant="22" id="nrQ-FH-IiR"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HT2-8Z-OIB">
+                    <rect key="frame" x="16" y="800" width="343" height="44"/>
+                    <color key="backgroundColor" red="0.92156862745098034" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="qJ7-PZ-vy7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                    <state key="normal" title="LƯU THAY ĐỔI">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="changeAccount:" destination="-1" eventType="touchUpInside" id="qe9-om-LU3"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3o7-k0-0fg">
+                    <rect key="frame" x="0.0" y="44" width="375" height="726"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Y5B-dx-oSa"/>
+                        <outlet property="delegate" destination="-1" id="0Id-cs-4UT"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HT2-8Z-OIB" secondAttribute="trailing" constant="16" id="9aU-T3-dvi"/>
+                <constraint firstItem="HT2-8Z-OIB" firstAttribute="top" secondItem="3o7-k0-0fg" secondAttribute="bottom" constant="30" id="IQr-0s-B3X"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3o7-k0-0fg" secondAttribute="trailing" id="Id4-L9-4tr"/>
+                <constraint firstItem="3o7-k0-0fg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="biu-19-8Pr"/>
+                <constraint firstItem="HT2-8Z-OIB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dYI-dx-SLV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HT2-8Z-OIB" secondAttribute="bottom" constant="19" id="dje-z5-kt6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LLv-db-Wtg" secondAttribute="trailing" id="jcb-A2-lLg"/>
+                <constraint firstItem="LLv-db-Wtg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ogV-LJ-mY4"/>
+                <constraint firstItem="LLv-db-Wtg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uZw-4t-tpw"/>
+                <constraint firstItem="3o7-k0-0fg" firstAttribute="top" secondItem="LLv-db-Wtg" secondAttribute="bottom" id="ykr-pu-jb7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-530" y="8"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Vector 16" width="17" height="13"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

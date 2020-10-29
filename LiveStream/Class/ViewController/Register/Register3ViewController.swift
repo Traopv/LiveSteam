@@ -18,9 +18,13 @@ class Register3ViewController: UIViewController {
     @IBOutlet weak var viewPass: UIView!
     @IBOutlet weak var viewRePass: UIView!
     
+    var phone : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         conFig()
+        
+        txtPhone.text = phone
     }
 
     //MARK:-
@@ -41,10 +45,33 @@ class Register3ViewController: UIViewController {
         btnUpdatePass.layer.cornerRadius = 2.0
         self.navigationController?.isNavigationBarHidden = true
     }
+    
+    func displayAlert(title : String, message: String) {
+        let dialogMessage = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            let loginVC = LoginViewController.init()
+            self.navigationController?.pushViewController(loginVC, animated: true)
+        })
+        
+        dialogMessage.addAction(ok)
+        
+        self.present(dialogMessage, animated: true, completion: nil)
+        
+    }
 
     //MARK:-
     //MARK: button function
     @IBAction func updatePassword(_ sender: Any) {
+        if txtPhone.text != nil && txtPass.text != nil && txtRePass.text != nil {
+            if txtPass.text == txtRePass.text {
+                Defaults.save(txtPhone.text ?? "",password: txtPass.text ?? "")
+                displayAlert(title: "Thông báo!", message: "Đăng ký thành công!")
+            } else {
+                displayAlert(title: "Thông báo!", message: "Mật khẩu không khớp!")
+            }
+        } else {
+            displayAlert(title: "Thông báo!", message: "Vui lòng điền đẩy đủ thông tin")
+        }
     }
 
     @IBAction func pushToLogin(_ sender: Any) {
