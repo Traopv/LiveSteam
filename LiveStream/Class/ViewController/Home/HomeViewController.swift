@@ -24,6 +24,12 @@ class HomeViewController: UIViewController {
         myTable.register(UINib.init(nibName: "HomeTableCell", bundle: nil), forCellReuseIdentifier: "HomeTableCell")
     }
     
+    @objc  func handleNextVC(){
+        let videoVC = VideoViewController.init()
+        self.navigationController?.pushViewController(videoVC, animated: true)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
     //MARK:-
     //MARK: button function
     @IBAction func search(_ sender: Any) {
@@ -53,6 +59,8 @@ extension HomeViewController : UITableViewDelegate,UITableViewDataSource {
         if section == 0 {
             let topHeaderHomeCell = TopHeaderHomeCell().fromNib(nibName: "TopHeaderHomeCell") as! TopHeaderHomeCell
             topHeaderHomeCell.conFig()
+            let nc = NotificationCenter.default
+            nc.addObserver(self, selector: #selector(handleNextVC), name: Notification.Name("pushToVideoVC"), object: nil)
             return topHeaderHomeCell
         } else {
             let sectionHomeCell = SectionHomeCell().fromNib(nibName: "SectionHomeCell") as! SectionHomeCell

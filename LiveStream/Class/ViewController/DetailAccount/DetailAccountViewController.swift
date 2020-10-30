@@ -67,6 +67,15 @@ class DetailAccountViewController: UIViewController {
     //MARK: button function
     
     @IBAction func changeAccount(_ sender: Any) {
+//        guard let popupVC = storyboard?.instantiateViewController(withIdentifier: "secondVC") as? ExamplePopupViewController else { return }
+//        guard let popupVC = TestView?.init("TestView") as? TestView else { return }
+//        popupVC.height = 300
+//        popupVC.topCornerRadius = 6.0
+//        popupVC.presentDuration = 1.5
+//        popupVC.dismissDuration = 1.5
+//        popupVC.shouldDismissInteractivelty = dismissInteractivelySwitch.isOn
+//        popupVC.popupDelegate = self
+//        present(popupVC, animated: true, completion: nil)
     }
     
     @IBAction func backToAccountVC(_ sender: Any) {

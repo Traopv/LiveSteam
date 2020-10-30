@@ -27,6 +27,19 @@ class CartViewController: UIViewController {
         conFig()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        DispatchQueue.main.async { [self] in
+            totalMoney = 0.0
+            myTable.reloadData()
+            let arrProducts = AppManager.shared.arrProducts
+            for i in 0 ..< arrProducts.count {
+                totalMoney += Double(arrProducts[i] * 200000)
+            }
+            lbPrices.text = "đ\(CustomMoney.numberToMoney(totalMoney))"
+        }
+    }
+    
     // MARK: -
     // MARK: config
     func conFig(){
@@ -83,19 +96,18 @@ extension CartViewController: UITableViewDelegate,UITableViewDataSource{
                 //code
                 let cart2VC = Cart2ViewController.init()
                 cart2VC.codeDiscount = codeDiscount
-                self.navigationController?.pushViewController(cart2VC, animated: true)
                 cart2VC.totalProducts = totalMoney
+                self.navigationController?.pushViewController(cart2VC, animated: true)
             }
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CartTBCell", for: indexPath) as! CartTBCell
-            cell.lbNumber.text = "\(AppManager.shared.getArrProduct(i: indexPath.row))"
+            cell.number = AppManager.shared.arrProducts[indexPath.row]
+            cell.lbNumber.text = "\(AppManager.shared.getArrProduct(arr: AppManager.shared.arrProducts, i: indexPath.row))"
             cell.numberProducts = { [self] (number : Int) in
                 AppManager.shared.arrProducts[indexPath.row] += number
-//                cell.lbNumber.text = "\(AppManager.shared.arrProducts[indexPath.row])"
-                cell.lbNumber.text = "\(AppManager.shared.getArrProduct(i: indexPath.row))"
-                totalMoney = Double(number * Int(cell.productMoneys)) + totalMoney
-                myTable.reloadData()
+                cell.lbNumber.text = "\(AppManager.shared.getArrProduct(arr: AppManager.shared.arrProducts, i: indexPath.row))"
+                totalMoney = Double(number) * cell.productMoneys + totalMoney
             }
             return cell
         }

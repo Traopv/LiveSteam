@@ -23,9 +23,9 @@ class AppManager: NSObject {
     var userInfo : NSDictionary? = NSDictionary()
     let Locale_vi = Locale.init(identifier: "vi_VN")
     
-    func getArrProduct(i : Int) -> Int
+    func getArrProduct(arr : [Int],i : Int) -> Int
     {
-        return arrProducts[i]
+        return arr[i]
     }
     
     func getUserName() -> String

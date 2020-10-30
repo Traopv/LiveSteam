@@ -45,7 +45,7 @@ class Cart2ViewController: UIViewController {
         headerView.backgroundColor = #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1)
         myTable.tableHeaderView = headerView
         
-        totalMoney = totalProducts + moneySale + moneyDelivery
+        totalMoney = totalProducts - moneySale + moneyDelivery
         lbSale.text = "\(CustomMoney.numberToMoney(moneySale))"
         lbTotalMoney.text = "đ\(CustomMoney.numberToMoney(totalMoney))"
         lbTotalProductsMoney.text = "đ\(CustomMoney.numberToMoney(totalProducts))"
@@ -54,7 +54,6 @@ class Cart2ViewController: UIViewController {
     // MARK: -
     // MARK: button function
     @IBAction func back(_ sender: Any) {
-        let cartVC = CartViewController.init()
         self.navigationController?.popViewController(animated: true)
         
     }
@@ -97,12 +96,12 @@ extension Cart2ViewController: UITableViewDelegate,UITableViewDataSource{
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CartTBCell", for: indexPath) as! CartTBCell
-//            cell.lbNumber.text = "\(AppManager.shared.arrProducts[indexPath.row])"
-            cell.lbNumber.text = "\(AppManager.shared.getArrProduct(i: indexPath.row))"
+            cell.number = AppManager.shared.arrProducts[indexPath.row]
+            cell.lbNumber.text = "\(AppManager.shared.getArrProduct(arr: AppManager.shared.arrProducts, i: indexPath.row))"
             cell.numberProducts = { [self] (number : Int) in
                 AppManager.shared.arrProducts[indexPath.row] += number
-                lbTotalProductsMoney.text = "đ\(CustomMoney.numberToMoney(totalMoney + Double(number) * 200000.0))"
-                cell.lbNumber.text = "\(AppManager.shared.getArrProduct(i: indexPath.row))"
+                lbTotalProductsMoney.text = "đ\(CustomMoney.numberToMoney(totalProducts + Double(number) * 200000.0))"
+                cell.lbNumber.text = "\(AppManager.shared.getArrProduct(arr: AppManager.shared.arrProducts, i: indexPath.row))"
                 totalMoney = Double(number * Int(cell.productMoneys)) + totalMoney
                 lbTotalMoney.text = "đ\(CustomMoney.numberToMoney(totalMoney))"
             }

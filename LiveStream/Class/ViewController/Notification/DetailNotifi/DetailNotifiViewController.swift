@@ -63,6 +63,7 @@ extension DetailNotifiViewController: UITableViewDataSource,UITableViewDelegate{
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DetailNotifiCell1", for: indexPath) as! DetailNotifiCell1
+            cell.conFig()
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DetailNotifiCell2", for: indexPath) as! DetailNotifiCell2

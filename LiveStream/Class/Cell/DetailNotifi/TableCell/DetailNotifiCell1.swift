@@ -16,6 +16,7 @@ class DetailNotifiCell1: UITableViewCell {
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var lbNumber: UILabel!
     @IBOutlet weak var lbPrices: UILabel!
+    @IBOutlet weak var viewDashedLine: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,6 +32,7 @@ class DetailNotifiCell1: UITableViewCell {
     //MARK:-
     //MARK: config
     func conFig() {
+        viewDashedLine.addDashedBorder()
     }
     
     //MARK:-
