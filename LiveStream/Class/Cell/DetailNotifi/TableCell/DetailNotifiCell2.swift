@@ -10,6 +10,7 @@ import UIKit
 
 class DetailNotifiCell2: UITableViewCell {
 
+    @IBOutlet weak var viewCell: UIView!
     @IBOutlet weak var lbCustomer: UILabel!
     @IBOutlet weak var lbPhone: UILabel!
     @IBOutlet weak var lbAddress: UILabel!

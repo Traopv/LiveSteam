@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LatoSemibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeaderAccView" customModule="LiveStream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jz-y6-kWG">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1584324285-90-anh-2-1584088794-width650height867 1" translatesAutoresizingMaskIntoConstraints="NO" id="cM0-ad-koG">
+                            <rect key="frame" x="16" y="15" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="nTW-nw-e3B"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quỳnh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIC-gl-3zY">
+                            <rect key="frame" x="89" y="17" width="48.5" height="19.5"/>
+                            <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0973224299" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zw2-bc-2AI">
+                            <rect key="frame" x="90" y="40.5" width="70" height="14"/>
+                            <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="12"/>
+                            <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ngocquynh30594@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgN-zN-fTH">
+                            <rect key="frame" x="90" y="58.5" width="157.5" height="14"/>
+                            <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="12"/>
+                            <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 88" translatesAutoresizingMaskIntoConstraints="NO" id="L31-FL-oD3">
+                            <rect key="frame" x="387" y="42" width="9" height="17"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="zw2-bc-2AI" firstAttribute="leading" secondItem="cM0-ad-koG" secondAttribute="trailing" constant="14" id="07m-Qq-yM9"/>
+                        <constraint firstItem="EIC-gl-3zY" firstAttribute="top" secondItem="9jz-y6-kWG" secondAttribute="top" constant="17" id="64q-3u-Els"/>
+                        <constraint firstAttribute="height" constant="90" id="9jy-to-SKY"/>
+                        <constraint firstItem="CgN-zN-fTH" firstAttribute="leading" secondItem="cM0-ad-koG" secondAttribute="trailing" constant="14" id="IEf-ev-41k"/>
+                        <constraint firstItem="cM0-ad-koG" firstAttribute="centerY" secondItem="9jz-y6-kWG" secondAttribute="centerY" id="RC1-RO-LOi"/>
+                        <constraint firstItem="cM0-ad-koG" firstAttribute="leading" secondItem="9jz-y6-kWG" secondAttribute="leading" constant="16" id="RYG-UZ-paf"/>
+                        <constraint firstItem="EIC-gl-3zY" firstAttribute="leading" secondItem="cM0-ad-koG" secondAttribute="trailing" constant="13" id="WMC-WE-Esq"/>
+                        <constraint firstAttribute="trailing" secondItem="L31-FL-oD3" secondAttribute="trailing" constant="18" id="YhT-dS-X8f"/>
+                        <constraint firstItem="zw2-bc-2AI" firstAttribute="top" secondItem="EIC-gl-3zY" secondAttribute="bottom" constant="4" id="d4Y-H2-iDz"/>
+                        <constraint firstItem="L31-FL-oD3" firstAttribute="top" secondItem="9jz-y6-kWG" secondAttribute="top" constant="42" id="f8n-nH-lbj"/>
+                        <constraint firstItem="cM0-ad-koG" firstAttribute="top" secondItem="9jz-y6-kWG" secondAttribute="top" constant="15" id="gun-Qz-g3e"/>
+                        <constraint firstItem="CgN-zN-fTH" firstAttribute="top" secondItem="zw2-bc-2AI" secondAttribute="bottom" constant="4" id="mHh-sb-B4r"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9jz-y6-kWG" secondAttribute="trailing" id="9Am-Lh-MHo"/>
+                <constraint firstItem="9jz-y6-kWG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Esl-nv-U2D"/>
+                <constraint firstItem="9jz-y6-kWG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="W7E-VY-56O"/>
+                <constraint firstItem="9jz-y6-kWG" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="k5X-hb-S1F"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lbEmail" destination="CgN-zN-fTH" id="qaf-LJ-lpu"/>
+                <outlet property="lbName" destination="EIC-gl-3zY" id="64n-64-FNi"/>
+                <outlet property="lbPhone" destination="zw2-bc-2AI" id="lJN-nG-qLe"/>
+            </connections>
+            <point key="canvasLocation" x="-816" y="-122"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="1584324285-90-anh-2-1584088794-width650height867 1" width="60" height="60"/>
+        <image name="Rectangle 88" width="9.5" height="17"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

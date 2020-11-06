@@ -3,8 +3,9 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -16,124 +17,142 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="DetailNotifiCell3" customModule="LiveStream" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="409" height="234"/>
+            <rect key="frame" x="0.0" y="0.0" width="409" height="246"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="409" height="234"/>
+                <rect key="frame" x="0.0" y="0.0" width="409" height="246"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông tin thanh toán" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thV-iO-3FZ">
-                        <rect key="frame" x="17" y="12" width="375" height="19"/>
-                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phương thức thanh toán" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqP-vw-NRj">
-                        <rect key="frame" x="17" y="171.5" width="178.5" height="19"/>
-                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng tiền sản phẩm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zE-zA-8uR">
-                        <rect key="frame" x="17" y="39" width="143" height="19"/>
-                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
-                        <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="240.000đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sF0-z7-UeN">
-                        <rect key="frame" x="325.5" y="39" width="67.5" height="19"/>
-                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
-                        <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scK-qT-d5B">
-                        <rect key="frame" x="374.5" y="66" width="18.5" height="19"/>
-                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
-                        <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4s-rm-8SI">
-                        <rect key="frame" x="374.5" y="93" width="18.5" height="19"/>
-                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
-                        <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khuyến mãi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pC4-Ey-uFZ">
-                        <rect key="frame" x="17" y="66" width="84" height="19"/>
-                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
-                        <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phí giao hàng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tK-Vg-net">
-                        <rect key="frame" x="17" y="93" width="98" height="19"/>
-                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
-                        <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng tiền" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgq-m1-dFh">
-                        <rect key="frame" x="17" y="120" width="67" height="19"/>
-                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
-                        <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="240.000đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yti-UU-Clp">
-                        <rect key="frame" x="325.5" y="120" width="67.5" height="19"/>
-                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
-                        <color key="textColor" red="0.92156862745098034" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4v-VJ-v3Y">
-                        <rect key="frame" x="17" y="155" width="376" height="0.5"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GlL-8G-cWO">
+                        <rect key="frame" x="0.0" y="0.0" width="409" height="246"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng tiền" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2b-Yy-XGT">
+                                <rect key="frame" x="17" y="120" width="66" height="19"/>
+                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRk-c5-gRE">
+                                <rect key="frame" x="17" y="155" width="375" height="0.5"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="eYl-1U-fC6"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng tiền sản phẩm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ca-0k-fNA">
+                                <rect key="frame" x="16" y="39" width="137.5" height="19"/>
+                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phương thức thanh toán" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOr-ZK-Ow2">
+                                <rect key="frame" x="17" y="171.5" width="174" height="19"/>
+                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="240.000đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPX-nz-1z1">
+                                <rect key="frame" x="323" y="120" width="68.5" height="19"/>
+                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                <color key="textColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanh toán khi nhận hàng (COD)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6d1-9T-Jj5">
+                                <rect key="frame" x="17" y="198.5" width="230.5" height="19"/>
+                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28a-Kf-gIK">
+                                <rect key="frame" x="373" y="66" width="18.5" height="19"/>
+                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phí giao hàng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8u-ab-Mr9">
+                                <rect key="frame" x="17" y="93" width="95" height="19"/>
+                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="240.000đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZf-8u-bBB">
+                                <rect key="frame" x="323" y="39" width="68.5" height="19"/>
+                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2H-XP-aEf">
+                                <rect key="frame" x="373" y="93" width="18.5" height="19"/>
+                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khuyến mãi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHp-JC-QMA">
+                                <rect key="frame" x="17" y="66" width="84" height="19"/>
+                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông tin thanh toán" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bb2-tz-Mrf">
+                                <rect key="frame" x="17" y="12" width="375" height="19"/>
+                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="0.5" id="dkl-zA-Htg"/>
+                            <constraint firstAttribute="trailing" secondItem="GPX-nz-1z1" secondAttribute="trailing" constant="17.5" id="1Y2-aJ-sNK"/>
+                            <constraint firstItem="bRk-c5-gRE" firstAttribute="top" secondItem="H2b-Yy-XGT" secondAttribute="bottom" constant="16" id="7U4-Xt-S7Y"/>
+                            <constraint firstItem="6d1-9T-Jj5" firstAttribute="top" secondItem="HOr-ZK-Ow2" secondAttribute="bottom" constant="8" id="8cG-DS-GG3"/>
+                            <constraint firstItem="7ca-0k-fNA" firstAttribute="top" secondItem="Bb2-tz-Mrf" secondAttribute="bottom" constant="8" id="BbO-2n-T4Q"/>
+                            <constraint firstItem="GPX-nz-1z1" firstAttribute="top" secondItem="P2H-XP-aEf" secondAttribute="bottom" constant="8" id="DQ4-VQ-JGm"/>
+                            <constraint firstItem="H2b-Yy-XGT" firstAttribute="top" secondItem="e8u-ab-Mr9" secondAttribute="bottom" constant="8" id="Grg-pd-Gh2"/>
+                            <constraint firstItem="bRk-c5-gRE" firstAttribute="leading" secondItem="GlL-8G-cWO" secondAttribute="leading" constant="17" id="Icp-hx-QAp"/>
+                            <constraint firstItem="P2H-XP-aEf" firstAttribute="top" secondItem="28a-Kf-gIK" secondAttribute="bottom" constant="8" id="K3f-80-B3T"/>
+                            <constraint firstAttribute="trailing" secondItem="28a-Kf-gIK" secondAttribute="trailing" constant="17.5" id="KRU-cc-pD2"/>
+                            <constraint firstAttribute="trailing" secondItem="bRk-c5-gRE" secondAttribute="trailing" constant="17" id="LgJ-7l-Nia"/>
+                            <constraint firstAttribute="trailing" secondItem="Bb2-tz-Mrf" secondAttribute="trailing" constant="17" id="NCk-LU-P1u"/>
+                            <constraint firstAttribute="trailing" secondItem="P2H-XP-aEf" secondAttribute="trailing" constant="17.5" id="Nwr-kv-16Q"/>
+                            <constraint firstItem="7ca-0k-fNA" firstAttribute="leading" secondItem="GlL-8G-cWO" secondAttribute="leading" constant="16" id="QBp-Pm-yJu"/>
+                            <constraint firstItem="6d1-9T-Jj5" firstAttribute="leading" secondItem="GlL-8G-cWO" secondAttribute="leading" constant="17" id="REF-c7-pBY"/>
+                            <constraint firstItem="HOr-ZK-Ow2" firstAttribute="top" secondItem="bRk-c5-gRE" secondAttribute="bottom" constant="16" id="RVo-CE-vEy"/>
+                            <constraint firstItem="HOr-ZK-Ow2" firstAttribute="leading" secondItem="GlL-8G-cWO" secondAttribute="leading" constant="17" id="SRq-KW-TTN"/>
+                            <constraint firstItem="Bb2-tz-Mrf" firstAttribute="top" secondItem="GlL-8G-cWO" secondAttribute="top" constant="12" id="SdZ-k0-m72"/>
+                            <constraint firstItem="cHp-JC-QMA" firstAttribute="top" secondItem="7ca-0k-fNA" secondAttribute="bottom" constant="8" id="Sy1-Lx-u39"/>
+                            <constraint firstItem="e8u-ab-Mr9" firstAttribute="top" secondItem="cHp-JC-QMA" secondAttribute="bottom" constant="8" id="am8-qD-TKe"/>
+                            <constraint firstItem="Bb2-tz-Mrf" firstAttribute="leading" secondItem="GlL-8G-cWO" secondAttribute="leading" constant="17" id="fLG-oH-LKk"/>
+                            <constraint firstItem="cHp-JC-QMA" firstAttribute="leading" secondItem="GlL-8G-cWO" secondAttribute="leading" constant="17" id="mS6-lm-ZMc"/>
+                            <constraint firstItem="e8u-ab-Mr9" firstAttribute="leading" secondItem="GlL-8G-cWO" secondAttribute="leading" constant="17" id="nDE-rA-Cdd"/>
+                            <constraint firstItem="28a-Kf-gIK" firstAttribute="top" secondItem="yZf-8u-bBB" secondAttribute="bottom" constant="8" id="uwd-pf-exq"/>
+                            <constraint firstItem="H2b-Yy-XGT" firstAttribute="leading" secondItem="GlL-8G-cWO" secondAttribute="leading" constant="17" id="vcM-E8-xop"/>
+                            <constraint firstItem="yZf-8u-bBB" firstAttribute="top" secondItem="Bb2-tz-Mrf" secondAttribute="bottom" constant="8" id="x11-VE-PkB"/>
+                            <constraint firstAttribute="trailing" secondItem="yZf-8u-bBB" secondAttribute="trailing" constant="17.5" id="xGZ-cP-emY"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanh toán khi nhận hàng (COD)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crE-ev-ey0">
-                        <rect key="frame" x="17" y="198.5" width="234" height="19"/>
-                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
-                        <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
+                <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="sF0-z7-UeN" firstAttribute="top" secondItem="thV-iO-3FZ" secondAttribute="bottom" constant="8" id="3DR-Lm-ZKd"/>
-                    <constraint firstItem="B4s-rm-8SI" firstAttribute="top" secondItem="scK-qT-d5B" secondAttribute="bottom" constant="8" id="3Uw-pe-RoS"/>
-                    <constraint firstItem="5tK-Vg-net" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="7cw-mu-hav"/>
-                    <constraint firstAttribute="trailing" secondItem="f4v-VJ-v3Y" secondAttribute="trailing" constant="16" id="7s6-AF-nDP"/>
-                    <constraint firstItem="pC4-Ey-uFZ" firstAttribute="top" secondItem="9zE-zA-8uR" secondAttribute="bottom" constant="8" id="An0-OH-CrJ"/>
-                    <constraint firstItem="yti-UU-Clp" firstAttribute="top" secondItem="B4s-rm-8SI" secondAttribute="bottom" constant="8" id="BJe-ck-YVU"/>
-                    <constraint firstItem="crE-ev-ey0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="E5O-14-Vwe"/>
-                    <constraint firstItem="gqP-vw-NRj" firstAttribute="top" secondItem="f4v-VJ-v3Y" secondAttribute="bottom" constant="16" id="Er7-Mi-7J6"/>
-                    <constraint firstAttribute="trailing" secondItem="sF0-z7-UeN" secondAttribute="trailing" constant="16" id="MQm-hd-ShS"/>
-                    <constraint firstItem="thV-iO-3FZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Rch-lK-5Yb"/>
-                    <constraint firstItem="f4v-VJ-v3Y" firstAttribute="top" secondItem="zgq-m1-dFh" secondAttribute="bottom" constant="16" id="UT8-Gl-ej2"/>
-                    <constraint firstItem="9zE-zA-8uR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="ZX1-Dg-zvN"/>
-                    <constraint firstItem="zgq-m1-dFh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="Zjl-JD-EJt"/>
-                    <constraint firstAttribute="trailing" secondItem="B4s-rm-8SI" secondAttribute="trailing" constant="16" id="av0-bR-w2s"/>
-                    <constraint firstAttribute="trailing" secondItem="scK-qT-d5B" secondAttribute="trailing" constant="16" id="fAS-w0-CxS"/>
-                    <constraint firstItem="gqP-vw-NRj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="gt8-pc-79j"/>
-                    <constraint firstAttribute="trailing" secondItem="yti-UU-Clp" secondAttribute="trailing" constant="16" id="iVN-px-hWe"/>
-                    <constraint firstAttribute="trailing" secondItem="thV-iO-3FZ" secondAttribute="trailing" constant="17" id="l96-tE-lsr"/>
-                    <constraint firstItem="9zE-zA-8uR" firstAttribute="top" secondItem="thV-iO-3FZ" secondAttribute="bottom" constant="8" id="mgk-Mf-qNS"/>
-                    <constraint firstItem="thV-iO-3FZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="pAz-Tv-szg"/>
-                    <constraint firstItem="crE-ev-ey0" firstAttribute="top" secondItem="gqP-vw-NRj" secondAttribute="bottom" constant="8" id="pEn-yC-Db7"/>
-                    <constraint firstItem="zgq-m1-dFh" firstAttribute="top" secondItem="5tK-Vg-net" secondAttribute="bottom" constant="8" id="qgC-bN-NWO"/>
-                    <constraint firstItem="5tK-Vg-net" firstAttribute="top" secondItem="pC4-Ey-uFZ" secondAttribute="bottom" constant="8" id="skw-W7-6Kw"/>
-                    <constraint firstItem="f4v-VJ-v3Y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="tSf-9w-86u"/>
-                    <constraint firstItem="pC4-Ey-uFZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="tb5-9F-uHI"/>
-                    <constraint firstItem="scK-qT-d5B" firstAttribute="top" secondItem="sF0-z7-UeN" secondAttribute="bottom" constant="8" id="tsz-AU-xHW"/>
+                    <constraint firstAttribute="bottom" secondItem="GlL-8G-cWO" secondAttribute="bottom" id="OxH-2n-kZF"/>
+                    <constraint firstItem="GlL-8G-cWO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Rft-d3-8Xs"/>
+                    <constraint firstItem="GlL-8G-cWO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bsT-5c-aO7"/>
+                    <constraint firstAttribute="trailing" secondItem="GlL-8G-cWO" secondAttribute="trailing" id="lrb-CE-y7D"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="lbPromotion" destination="scK-qT-d5B" id="Sda-o8-lob"/>
-                <outlet property="lbPromotionMoney" destination="B4s-rm-8SI" id="FBD-ME-FhK"/>
-                <outlet property="lbToTalProductMoney" destination="sF0-z7-UeN" id="NcG-0b-N1T"/>
-                <outlet property="lbTotalMoney" destination="yti-UU-Clp" id="T2w-zn-QAq"/>
-                <outlet property="lbTypePay" destination="crE-ev-ey0" id="k5L-BM-Cch"/>
+                <outlet property="lbPromotionMoney" destination="P2H-XP-aEf" id="N4l-0C-fLw"/>
+                <outlet property="lbToTalProductMoney" destination="yZf-8u-bBB" id="Vxn-t7-NmL"/>
+                <outlet property="lbTotalMoney" destination="GPX-nz-1z1" id="Ivq-ki-oMu"/>
+                <outlet property="lbTypePay" destination="6d1-9T-Jj5" id="rZU-Tv-Wti"/>
+                <outlet property="lbsale" destination="28a-Kf-gIK" id="T84-lc-JeG"/>
             </connections>
-            <point key="canvasLocation" x="-338.40579710144931" y="111.16071428571428"/>
+            <point key="canvasLocation" x="-614" y="9"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-LiveStream/Pods-LiveStream-frameworks.sh
+${BUILT_PRODUCTS_DIR}/PullToRefreshSwift/PullToRefreshSwift.framework
+${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework

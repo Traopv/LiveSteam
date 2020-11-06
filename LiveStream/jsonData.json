@@ -1,0 +1,28 @@
+{
+    "product" : [
+        {
+            "name" : "Áo phông 100% cotton, thoáng mát",
+            "dicription" : "Nano là loại vải tính năng mới, có khả năng thấm hút mồ hôi vượt trội, nhanh khô và thoát ẩm, cảm giác mát lạnh mỗi khi mặc. Siêu phẩm SM nano là sản phẩm giúp tiết kiệm thời gian và bỏ qua các bước là ủi thông thường do ưu điểm không nhăn tự nhiên từ sợi, giữ được bền vững.Mặt khác, sợi còn được xử lý qua công nghệ chống tia tử ngoại, bảo vệ làn da cho người mặc, tránh tác hại xấu của thời tiết và môi trường. Sợi Nano là các sợi rất mảnh ( Sợi 300D) – nhỏ hơn đường kính sợi tóc nhiều lần, khiến kết cấu mặt vải đanh hơn, tạo ra form áo đứng hơn, mà vẫn mềm và nhẹ. Với kiểu dáng đơn giản mang lại sự tiện lợi cho người mặc, dễ phối đồ nhưng vẫn giữ được sự sang trọng, tinh tế",
+            "image" : "15862267424f31fce50ec62d969dd4d64fbfc8cf0b 2.png",
+            "points" : "120",
+            "oldPrices" : "120000",
+            "newPrices" : "100000",
+            "color" : "EB5757",
+            "size" : "S",
+            "time" : "24-09-2020 12:00:00",
+            "number" : "2"
+        },
+        {
+            "name" : "Áo nữ thu đông dáng Nhật Bản",
+            "dicription" : "Nano là loại vải tính năng mới, có khả năng thấm hút mồ hôi vượt trội, nhanh khô và thoát ẩm, cảm giác mát lạnh mỗi khi mặc.",
+            "image" : "37571712310ad644e1657ce21be1c1d4 2.png",
+            "points" : "240",
+            "oldPrices" : "240000",
+            "newPrices" : "200000",
+            "color" : "FFFFFF",
+            "size" : "M",
+            "time" : "24-09-2020 12:00:00",
+            "number" : "1"
+        }
+    ]
+}

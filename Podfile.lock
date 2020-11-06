@@ -1,0 +1,24 @@
+PODS:
+  - PullToRefreshSwift (3.0.3)
+  - SVProgressHUD (2.2.5)
+  - Toaster (2.2.0)
+
+DEPENDENCIES:
+  - PullToRefreshSwift (~> 3.0)
+  - SVProgressHUD
+  - Toaster
+
+SPEC REPOS:
+  trunk:
+    - PullToRefreshSwift
+    - SVProgressHUD
+    - Toaster
+
+SPEC CHECKSUMS:
+  PullToRefreshSwift: 0743b818072bfd7c9464addc2d1b987b131057ca
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
+
+PODFILE CHECKSUM: c9cdedac7d3dcea0de6db360df6517577985890c
+
+COCOAPODS: 1.9.3

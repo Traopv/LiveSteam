@@ -10,21 +10,20 @@ import UIKit
 
 class Cart2ViewController: UIViewController {
 
-    @IBOutlet weak var view1: UIView!
-    @IBOutlet weak var lbTotalMoney: UILabel!// tong tien
-    @IBOutlet weak var btnNextScreen: UIButton!
     @IBOutlet weak var myTable: UITableView!
-    @IBOutlet weak var lbTotalProductsMoney: UILabel! // tong tien san pham
-    @IBOutlet weak var lbSale: UILabel! // tien khuyen mai
-    @IBOutlet weak var lbDelivery: UILabel! // phi giao hang
     
     // moi discount code 40.000
-    var codeDiscount = ""
+    var codeDiscount = "1212"
     let discountMoney = 30000
     var totalProducts : Double = 0.0
     var moneySale : Double = 40000
     var moneyDelivery : Double = 0.0
-    var totalMoney = 0.0
+    
+    var totalMoney = 0.0//{
+//        didSet{
+//            myTable.reloadData()
+//        }
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +35,6 @@ class Cart2ViewController: UIViewController {
     // MARK: -
     // MARK: config
     func conFig(){
-        view1.layer.cornerRadius = 6.0
-        btnNextScreen.layer.cornerRadius = 4.0
         myTable.register(UINib.init(nibName: "CartTBCell", bundle: nil), forCellReuseIdentifier: "CartTBCell")
         myTable.register(UINib.init(nibName: "DiscountCodeCell", bundle: nil), forCellReuseIdentifier: "DiscountCodeCell")
         
@@ -46,9 +43,6 @@ class Cart2ViewController: UIViewController {
         myTable.tableHeaderView = headerView
         
         totalMoney = totalProducts - moneySale + moneyDelivery
-        lbSale.text = "\(CustomMoney.numberToMoney(moneySale))"
-        lbTotalMoney.text = "đ\(CustomMoney.numberToMoney(totalMoney))"
-        lbTotalProductsMoney.text = "đ\(CustomMoney.numberToMoney(totalProducts))"
     }
     
     // MARK: -
@@ -57,32 +51,44 @@ class Cart2ViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
         
     }
-    
-    @IBAction func nextScreen(_ sender: Any) {
-        let cart3VC = Cart3ViewController.init()
-        cart3VC.totalProducts = totalMoney
-        self.navigationController?.pushViewController(cart3VC, animated: true)
-    }
 }
 
 // MARK: -
 extension Cart2ViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return AppManager.shared.arrProducts.count + 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
-        case 2:
+        case AppManager.shared.arrProducts.count:
             return 84
         default:
             return 145
         }
     }
     
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footer = FooterCart2View().fromNib(nibName: "FooterCart2View") as! FooterCart2View
+        footer.conFig()
+        footer.lbSale.text = "\(CustomMoney.numberToMoney(moneySale))"
+        footer.lbTotalMoney.text = "đ\(CustomMoney.numberToMoney(totalMoney))"
+        footer.lbTotalProductsMoney.text = "đ\(CustomMoney.numberToMoney(totalProducts))"
+        footer.pushCart3VC = { [self] in
+            let cart3VC = Cart3ViewController.init()
+            cart3VC.totalProducts = totalMoney
+            self.navigationController?.pushViewController(cart3VC, animated: true)
+        }
+        return footer
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 234
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
-        case 2:
+        case AppManager.shared.arrProducts.count:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DiscountCodeCell", for: indexPath) as! DiscountCodeCell
             cell.indexType = 2
             cell.conFig()
@@ -91,22 +97,28 @@ extension Cart2ViewController: UITableViewDelegate,UITableViewDataSource{
             cell.txtDiscountCode.text = codeDiscount
             cell.applyDiscountCode = { [self] in
                 totalMoney = totalMoney - Double(discountMoney)
-                lbTotalMoney.text = "đ\(CustomMoney.numberToMoney(totalMoney))"
             }
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CartTBCell", for: indexPath) as! CartTBCell
-            cell.number = AppManager.shared.arrProducts[indexPath.row]
-            cell.lbNumber.text = "\(AppManager.shared.getArrProduct(arr: AppManager.shared.arrProducts, i: indexPath.row))"
+            let item = AppManager.shared.arrProducts[indexPath.row]
+            cell.number = item.number
+            cell.lbNumber.text = "\(cell.number)"
+            cell.lbOldPrice.text = String(item.oldPrices)
+            cell.lbOldPrice.text = String(item.oldPrices)
+            cell.lbTitle.text = item.name
+            cell.lbColor.text = "Màu: \(item.color)"
+            cell.lbSize.text = "Size: \(item.size)"
+            
             cell.numberProducts = { [self] (number : Int) in
-                AppManager.shared.arrProducts[indexPath.row] += number
-                lbTotalProductsMoney.text = "đ\(CustomMoney.numberToMoney(totalProducts + Double(number) * 200000.0))"
-                cell.lbNumber.text = "\(AppManager.shared.getArrProduct(arr: AppManager.shared.arrProducts, i: indexPath.row))"
-                totalMoney = Double(number * Int(cell.productMoneys)) + totalMoney
-                lbTotalMoney.text = "đ\(CustomMoney.numberToMoney(totalMoney))"
+                AppManager.shared.arrProducts[indexPath.row].number += number
+                cell.lbNumber.text = "\(cell.number)"
+                totalMoney += Double(number) * item.newPrices
+                totalProducts += Double(number) * item.newPrices
+                myTable.reloadData()
             }
             return cell
+
         }
-        return UITableViewCell.init()
     }
 }

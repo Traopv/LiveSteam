@@ -11,10 +11,7 @@ import UIKit
 class DetailNotifiViewController: UIViewController {
 
     @IBOutlet weak var myTable: UITableView!
-    @IBOutlet weak var lbStatus: UILabel!
-    @IBOutlet weak var imgProduct: UIImageView!
-    @IBOutlet weak var lbTime: UILabel!
-    @IBOutlet weak var lbTitleProduct: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +24,11 @@ class DetailNotifiViewController: UIViewController {
         myTable.register(UINib.init(nibName: "DetailNotifiCell1", bundle: nil), forCellReuseIdentifier: "DetailNotifiCell1")
         myTable.register(UINib.init(nibName: "DetailNotifiCell2", bundle: nil), forCellReuseIdentifier: "DetailNotifiCell2")
         myTable.register(UINib.init(nibName: "DetailNotifiCell3", bundle: nil), forCellReuseIdentifier: "DetailNotifiCell3")
+        myTable.register(UINib.init(nibName: "DetailNotifiCell5", bundle: nil), forCellReuseIdentifier: "DetailNotifiCell5")
         
-        let attributedStr = NSMutableAttributedString.init(string: lbTitleProduct.text ?? "")
-        attributedStr.addAttribute(.foregroundColor, value: UIColor.init(red: 0, green: 0, blue: 0, alpha: 1), range: NSRange.init(location: 9, length: 13))
-        lbTitleProduct.attributedText = attributedStr
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 12.0))
+        headerView.backgroundColor = #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1)
+        myTable.tableHeaderView = headerView
     }
     
     //MARK:-
@@ -45,14 +43,16 @@ class DetailNotifiViewController: UIViewController {
 //MARK:-
 extension DetailNotifiViewController: UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return 219
+            return 140
         case 1:
+            return 219
+        case 2:
             return 127
         default:
             return 234
@@ -62,10 +62,14 @@ extension DetailNotifiViewController: UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DetailNotifiCell1", for: indexPath) as! DetailNotifiCell1
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DetailNotifiCell5", for: indexPath) as! DetailNotifiCell5
             cell.conFig()
             return cell
         case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DetailNotifiCell1", for: indexPath) as! DetailNotifiCell1
+            cell.conFig()
+            return cell
+        case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DetailNotifiCell2", for: indexPath) as! DetailNotifiCell2
             return cell
         default:

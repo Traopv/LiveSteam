@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Heavy.ttf">
+            <string>Lato-Heavy</string>
+        </array>
+        <array key="LatoSemibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DiscountCodeView" customModule="LiveStream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fER-oC-6Of">
+                    <rect key="frame" x="16" y="13" width="221" height="40"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mã giảm giá" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kCL-OW-E1U">
+                            <rect key="frame" x="12" y="9.5" width="209" height="21"/>
+                            <color key="textColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="221" id="LLg-je-G1k"/>
+                        <constraint firstItem="kCL-OW-E1U" firstAttribute="leading" secondItem="fER-oC-6Of" secondAttribute="leading" constant="12" id="aou-Q7-OWp"/>
+                        <constraint firstAttribute="trailing" secondItem="kCL-OW-E1U" secondAttribute="trailing" id="cMr-TS-Dzn"/>
+                        <constraint firstItem="kCL-OW-E1U" firstAttribute="centerY" secondItem="fER-oC-6Of" secondAttribute="centerY" id="qKT-Fr-F4k"/>
+                        <constraint firstAttribute="height" constant="40" id="z1q-EY-XXd"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mU3-iW-wBN">
+                    <rect key="frame" x="249" y="13" width="110" height="40"/>
+                    <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="pkE-ao-jWX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Heavy" family="Lato" pointSize="14"/>
+                    <state key="normal" title="ÁP DỤNG">
+                        <color key="titleColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickApply:" destination="iN0-l3-epB" eventType="touchUpInside" id="GiF-vM-eld"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="mU3-iW-wBN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="13" id="4Pi-ZL-nIT"/>
+                <constraint firstItem="fER-oC-6Of" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="58i-Az-QVg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mU3-iW-wBN" secondAttribute="trailing" constant="16" id="Od8-QW-ELo"/>
+                <constraint firstItem="fER-oC-6Of" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="13" id="SeR-cW-ptQ"/>
+                <constraint firstItem="mU3-iW-wBN" firstAttribute="leading" secondItem="fER-oC-6Of" secondAttribute="trailing" constant="12" id="qB9-bx-Vli"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnApply" destination="mU3-iW-wBN" id="Axf-t2-3In"/>
+                <outlet property="txtDiscountCode" destination="kCL-OW-E1U" id="rpq-3n-1Zh"/>
+                <outlet property="viewDiscount" destination="fER-oC-6Of" id="OeM-Ug-AQa"/>
+            </connections>
+            <point key="canvasLocation" x="-777" y="-110"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

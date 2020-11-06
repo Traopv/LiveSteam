@@ -47,9 +47,6 @@ class LoginViewController: UIViewController {
         let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
             print("Ok button tapped")
         })
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
-            print("Cancel button tapped")
-        }
         
         dialogMessage.addAction(ok)
         

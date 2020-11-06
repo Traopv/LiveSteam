@@ -16,9 +16,9 @@ class TabbarViewController: UITabBarController {
     let notifiVC = NotificationViewController.init()
     let accountVC = AccountViewController.init()
     
+    var dataProducts : [Products] = [Products]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupTabbar()
     }
     

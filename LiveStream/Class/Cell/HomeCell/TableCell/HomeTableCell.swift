@@ -28,7 +28,6 @@ class HomeTableCell: UITableViewCell {
     func conFig(){
         myCollection.register(UINib.init(nibName: "HomeCell", bundle: nil), forCellWithReuseIdentifier: "HomeCell")
     }
-    
 }
 
 //MARK:-
@@ -43,6 +42,25 @@ extension HomeTableCell : UICollectionViewDelegate,UICollectionViewDataSource,UI
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath) as! HomeCell
         cell.conFig()
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let  popupOrderView : PopupOrderView = PopupOrderView().fromNib(nibName: "PopupOrderView", index: 0) as! PopupOrderView
+        popupOrderView.conFig()
+        popupOrderView.frame = CGRect(x: 0, y: 0, width: VTConstants.ScreenSize.SCREEN_WIDTH, height: 400)
+        popupOrderView.roundCorners([.topLeft, .topRight], radius: 15)
+        popupOrderView.layer.masksToBounds = true
+        let klc = KLCPopup.init(contentView: popupOrderView)
+        popupOrderView.hiddenPopup = {
+            klc?.dismissType = .bounceOutToBottom
+            klc?.isHidden = true
+        }
+        klc?.showType = .bounceInFromBottom
+        klc?.dismissType = .bounceOutToBottom
+        klc?.maskType = .dimmed
+        klc?.shouldDismissOnBackgroundTouch = true
+        klc?.show(atCenter: CGPoint(x: VTConstants.ScreenSize.SCREEN_WIDTH / 2, y: VTConstants.ScreenSize.SCREEN_HEIGHT - 200), in: popupOrderView)
+        klc?.show()
     }
 }
 

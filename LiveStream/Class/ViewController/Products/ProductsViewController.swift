@@ -14,7 +14,7 @@ class ProductsViewController: UIViewController {
     @IBOutlet weak var txtSearch: UITextField!
     @IBOutlet weak var viewSearch: UIView!
     
-    var arrTitleSection = ["","Danh mục","Sản phẩm"]
+    var arrTitleSection = ["","Danh mục","Sản phẩm","Sản phẩm hot","Sản phẩm mới nhất"]
     override func viewDidLoad() {
         super.viewDidLoad()
         conFig()
@@ -45,7 +45,7 @@ class ProductsViewController: UIViewController {
 extension ProductsViewController : UITableViewDelegate,UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return arrTitleSection.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

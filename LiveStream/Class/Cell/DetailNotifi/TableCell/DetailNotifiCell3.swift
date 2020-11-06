@@ -11,7 +11,7 @@ import UIKit
 class DetailNotifiCell3: UITableViewCell {
 
     @IBOutlet weak var lbToTalProductMoney: UILabel!
-    @IBOutlet weak var lbPromotion: UILabel!
+    @IBOutlet weak var lbsale: UILabel!
     @IBOutlet weak var lbPromotionMoney: UILabel!
     @IBOutlet weak var lbTotalMoney: UILabel!
     @IBOutlet weak var lbTypePay: UILabel!
